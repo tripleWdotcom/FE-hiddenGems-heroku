@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+/* @layer utilities {
+  .image-upload>input {
+  display: none;
+  }
+}  */
+
+
+
+.image-upload>input {
+  display: none;
+  }
+
+
+  input[type='radio']{
+  visibility: hidden;
+}
+
+input[type='radio']:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: relative;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  outline:solid 1px black;
+}
+
+input[type='radio']:checked:after {
+  background-color: #9540A6;
+}
+
+/* filters underline */
+.MuiTabs-scroller > span {
+  background-color:#6acf9d;
+  height: 6px;
+  border-radius: 0px 0px 3px 3px;
+}
+
+.css-1wf8b0h-MuiTabs-flexContainer > button {
+  text-transform: none;
+  font-size: medium;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.MuiInputLabel-root{
+  background-color: inherit;
+  border-radius: 4px;
+}
+
+.catContainer {
+    width: 95%;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+}
+.catContainer::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+
+/* remove arrows from the input TYPE = number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
