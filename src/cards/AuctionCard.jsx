@@ -17,7 +17,7 @@ export const AuctionCard = ({auction}) => {
   return (
     <div onClick={goToAuctionDetails} className="h-30 flex bg-white mb-3 p-1 outline-grey">
       <div className="picWrapper w-1/2">
-        <img className="h-32 w-32 object-cover" src={`uploads/${auction.imagePath}_img1.jpg`} alt="pic missing"></img>
+        <img className="h-32 w-32 object-cover" src={`../assets/uploads${auction.imagePath}_img1.jpg`} alt="pic missing"></img>
       </div>
       <div className="h-32 flex "></div>
       <div className="h-32 p-2 w-full flex flex-col bg-white">
