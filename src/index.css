@@ -4,25 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
-
 /* @layer utilities {
   .image-upload>input {
   display: none;
   }
 }  */
 
-
-
 .image-upload>input {
   display: none;
   }
 
 
-  input[type='radio']{
-  visibility: hidden;
+input[type='radio']{
+  -webkit-appearance: none;
+   -moz-appearance: none;
+   -ms-appearance: none;
+   -o-appearance: none;
+   appearance: none;
 }
 
 input[type='radio']:after {

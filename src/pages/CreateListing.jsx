@@ -2,8 +2,11 @@ import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import Datepicker from "../components/Datepicker";
-let formData = new FormData()
 import util from "../styles/util"
+import emptyPic from "../images/upload.jpeg"; 
+
+
+let formData = new FormData()
 
 export const CreateListing = () => {
 
@@ -11,9 +14,9 @@ export const CreateListing = () => {
   const { currentUser } = useContext(UserContext)
   const [loginAlert, setLoginAlert] = useState(false)
   //Image Upload functions
-  const [preview1, setPreview1] = useState('src/images/upload.png')
-  const [preview2, setPreview2] = useState('src/images/upload.png')
-  const [preview3, setPreview3] = useState('src/images/upload.png')
+  const [preview1, setPreview1] = useState('')
+  const [preview2, setPreview2] = useState('')
+  const [preview3, setPreview3] = useState('')
   const [noFiles, setNoFiles] = useState(false)
   // const [buyNowCheckBox, setBuyNowCheckBox] = useState(false)
 
@@ -179,21 +182,21 @@ export const CreateListing = () => {
             <div className="w-80 h-48 px-5 grid grid-rows-2 grid-cols-3 gap-x-4 gap-y-4 ">
               <div className="image-upload h-48 w-48 row-span-2 col-span-2">
                 <label htmlFor="image1">
-                  <img className="object-contain h-48 w-48" src={preview1} alt="" />
+                  <img className="object-contain h-48 w-48" src={preview1 || emptyPic } alt="preview main picture" />
                 </label>
                 <input id="image1" accept="image/*" type="file" onChange={e => onAddImage(e, 1)} />
               </div>
 
               <div className=" h-20 w-24 image-upload flex flex-wrap justify-center ">
                 <label htmlFor="image2">
-                  <img className="object-contain h-20 " src={preview2} alt="" />
+                  <img className="object-contain h-20 " src={preview2 || emptyPic} alt="preview picture 2" />
                 </label>
                 <input accept="image/*" type="file" id="image2" onChange={e => onAddImage(e, 2)} />
               </div>
 
               <div className=" h-20 w-24 image-upload flex flex-wrap -mt-4 justify-center">
                 <label htmlFor="image3">
-                  <img className="object-contain h-20 " src={preview3} alt="" />
+                  <img className="object-contain h-20 " src={preview3 || emptyPic} alt="preview picture 3" />
                 </label>
                 <input accept="image/*" type="file" id="image3" onChange={e => onAddImage(e, 3)} />
               </div>

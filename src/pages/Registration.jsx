@@ -6,7 +6,7 @@ import { UserContext } from "../contexts/UserContext";
 
 
 const FORM_STYLE = `flex flex-col justify-center items-center px-8`;
-const FORM_ELEMENT_SYLE = `font-myPtext text-lg w-full`;
+const FORM_ELEMENT_SYLE = `font-myPtext text-xl w-full`;
 const H1 = `font-myHtext font-bold text-2xl items-center p-4 mt-8 `;
 
 export const Registration = () => {

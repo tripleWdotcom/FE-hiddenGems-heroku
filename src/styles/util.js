@@ -62,7 +62,7 @@ export default {
     'border',
     'rounded-md',
     'outline-none',
-    'text-sm',
+    'text-base',
     'transition',
     'duration-150',
     'ease-in-out',
